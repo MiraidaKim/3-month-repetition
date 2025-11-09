@@ -1,0 +1,167 @@
+:root{
+    --bg: #f2f2f2;
+    --text: #222;
+    --card: #fff;
+    --accent: #007bff;
+    --border: #ccc;
+}
+
+body.dark {
+    --bg: #181818;
+    --text: #f9f9f9;
+    --card: #222;
+    --accent: #0d6efd;
+    --border: #444;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    transition: 0,3s;
+}
+
+.app {
+    width: 420px;
+    background-color: var(--card);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+    transform: rotate(20deg);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type="text"] {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+    outline: none;
+}
+
+#search {
+    border-color: #bbb;
+    background: #e9ecef;
+    padding-left: 36px;  /* место для иконки  */
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 18px;
+    transition: background 0.3s, border 0.3s;
+    color: black; 
+}
+
+#search:focus {
+    background-color: #f8f9fa;
+    border-color: var(--accent);
+}
+
+/* форма добавления */
+
+#todo-form {
+    display: flex;
+    gap: 8px;
+}
+
+#todo-form input {
+    flex-grow: 1;
+}
+
+#todo-form button {
+    flex-shrink: 0;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters button {
+    flex: 1;
+    margin: 0 3px;
+    background: #ccc;
+    color: black;
+}
+
+.filters button.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+li.completed {
+    background: rgba(0, 128, 0, 0.08);
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li span {
+    flex: 1;
+    margin-left: 10px;
+    word-break: break-word;
+}

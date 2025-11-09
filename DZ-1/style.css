@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  margin-bottom: 40px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.traffic-light {
+  width: 100px;
+  background: #333;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  background: gray;
+  border-radius: 50%;
+  margin: 10px auto;
+  transition: background 0.3s;
+}
+
+#text {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
