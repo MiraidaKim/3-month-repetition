@@ -41,7 +41,7 @@ document.getElementById("searchBtn").addEventListener("click", () => {
   const input = document.getElementById("searchInput").value.trim().toLowerCase();
   const index = students.findIndex(s => s.name.toLowerCase() === input);
   if (index !== -1) {
-    alert(Индекс студента: ${index});
+    alert(Индекс: $ {index});
   } else {
     alert("Пользователь не найден");
   }
